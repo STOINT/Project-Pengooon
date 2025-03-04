@@ -1,8 +1,8 @@
 [gd_scene load_steps=45 format=3 uid="uid://b7ua6j4ujxs16"]
 
 [ext_resource type="Script" path="res://Character/player.gd" id="1_e34fk"]
-[ext_resource type="Texture2D" uid="uid://cn1eqruxgwqy1" path="res://assets/player.png" id="1_vgsnj"]
-[ext_resource type="Texture2D" uid="uid://ufftv825g0hw" path="res://assets/playerflipped.png" id="3_c7xx3"]
+[ext_resource type="Texture2D" uid="uid://ccrigdpchk11g" path="res://assets/player.png" id="1_vgsnj"]
+[ext_resource type="Texture2D" uid="uid://but2g363ut6kl" path="res://assets/playerflipped.png" id="3_c7xx3"]
 [ext_resource type="Texture2D" uid="uid://d1f7gffni8c6t" path="res://icon.svg" id="4_u6ddn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_25mpw"]
@@ -314,8 +314,9 @@ radius = 9.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_e34fk")
-WALLJUMP_FORCE = 1200
-WALLJUMP_VELOCITY = -1200
+JUMP_FATTY = 0.0
+WALLJUMP_FORCE = 2000
+WALLJUMP_VELOCITY = -2000
 
 [node name="PENGOON" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gbgf8")
