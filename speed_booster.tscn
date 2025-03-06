@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://bmvsw8w00kfax"]
+
+[ext_resource type="Texture2D" uid="uid://d1f7gffni8c6t" path="res://icon.svg" id="1_t082y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hitu0"]
+atlas = ExtResource("1_t082y")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nasva"]
+atlas = ExtResource("1_t082y")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kbxq"]
+atlas = ExtResource("1_t082y")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ejoj"]
+atlas = ExtResource("1_t082y")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e3abi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hitu0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nasva")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kbxq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ejoj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 120.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_on4ib"]
+size = Vector2(32, 32)
+
+[node name="Speed Booster" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_e3abi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
+shape = SubResource("RectangleShape2D_on4ib")
