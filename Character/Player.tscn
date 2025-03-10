@@ -315,9 +315,6 @@ radius = 9.0
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_e34fk")
 JUMP_FATTY = 0.0
-WALLSLIDE = 130
-WALLJUMP_FORCE = 400
-WALLJUMP_VELOCITY = -300
 
 [node name="PENGOON" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gbgf8")
