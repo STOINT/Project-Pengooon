@@ -8,10 +8,10 @@ extends CharacterBody2D
 
 #Jump + wall slide variables
 @export_range(0, 1) var JUMP_FATTY = 0.5 
-@export var WALLSLIDE = 130
-@export var WALLJUMP_FORCE = 400
+@export var WALLSLIDE = 40
+@export var WALLJUMP_FORCE = 240
 @export var JUMP_VELOCITY = -400
-@export var WALLJUMP_VELOCITY = -250
+@export var WALLJUMP_VELOCITY = -260
 @export var Velocity = Vector2()
 @export var is_wall_sliding = false 
 
