@@ -14,6 +14,7 @@ extends CharacterBody2D
 @export var WALLJUMP_VELOCITY = -260
 @export var Velocity = Vector2()
 @export var is_wall_sliding = false 
+@export var ChangeSceneTo = "res://Levels/Level3.tscn"
 
 #Other stuff
 @onready var animated_sprite_2d = $PENGOON
@@ -70,5 +71,5 @@ func _physics_process(delta):
 	else: animated_sprite_2d.play("IdleRight")
 
 func _on_area_2d_body_entered(body):
-	get_tree().change_scene_to_file("res://Levels/Level2.tscn")
+	get_tree().change_scene_to_file(ChangeSceneTo)
 	print("i changed scene right")
