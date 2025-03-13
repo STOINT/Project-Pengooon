@@ -14,11 +14,14 @@ extends CharacterBody2D
 @export var WALLJUMP_VELOCITY = -260
 @export var Velocity = Vector2()
 @export var is_wall_sliding = false 
-@export var ChangeSceneTo = "res://Levels/Level3.tscn"
-
+var speed = 77
 #Other stuff
 @onready var animated_sprite_2d = $PENGOON
 @export var GRAVITY = 980
+
+func _on_area_2d_2_body_entered(body):
+	print("lemomns")
+	PLAYERMOVESPEED = PLAYERMOVESPEED * 2
 
 func _physics_process(delta):
 	# Gravity
@@ -45,8 +48,8 @@ func _physics_process(delta):
 	if Input.is_action_just_released("Space") and velocity.y < 0:
 		velocity.y *= JUMP_FATTY
 
-	# Base movement
-	var speed = SPRINT if Input.is_action_pressed("Sprint") else PLAYERMOVESPEED
+	# Movement direction and sprint key detector
+	speed = SPRINT if Input.is_action_pressed("Sprint") else PLAYERMOVESPEED
 	var direction = Input.get_axis("MoveLeft", "MoveRight")
 
 	#Velocity based movement
@@ -71,5 +74,9 @@ func _physics_process(delta):
 	else: animated_sprite_2d.play("IdleRight")
 
 func _on_area_2d_body_entered(body):
-	get_tree().change_scene_to_file(ChangeSceneTo)
+	get_tree().change_scene_to_file("res://Levels/Level2.tscn")
 	print("i changed scene right")
+
+
+func _on_area_2d_2_area_entered(area):
+	pass # Replace with function body.

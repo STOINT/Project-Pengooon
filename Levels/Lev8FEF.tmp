@@ -75,6 +75,17 @@ radius = 14.0357
 
 [node name="Player" parent="." instance=ExtResource("2_8785q")]
 position = Vector2(74, 555)
+DECELERATION = null
+ACCELERATION = null
+PLAYERMOVESPEED = null
+SPRINT = null
+WALLSLIDE = null
+WALLJUMP_FORCE = null
+JUMP_VELOCITY = null
+WALLJUMP_VELOCITY = null
+Velocity = null
+is_wall_sliding = null
+GRAVITY = null
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(64, 25)
