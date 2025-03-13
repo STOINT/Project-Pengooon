@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c8k8x8lo4sfs2" path="res://assets/Tilemaps/tilesheet1.png" id="1_ch6n1"]
 [ext_resource type="PackedScene" uid="uid://b7ua6j4ujxs16" path="res://Character/Player.tscn" id="2_8785q"]
-[ext_resource type="PackedScene" uid="uid://dwk0miyava7mc" path="res://SPOOOED ZONE.tscn" id="3_ouh6t"]
+[ext_resource type="PackedScene" uid="uid://cf5svc5kw3nr8" path="res://SPOOOED ZONE.tscn" id="3_ouh6t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5882x"]
 texture = ExtResource("1_ch6n1")
@@ -96,9 +96,10 @@ position = Vector2(0.568745, 0)
 scale = Vector2(1.00362, 1)
 polygon = PackedVector2Array(0.429699, 90, -120.134, 87, -121, 831, -2, 831)
 
-[node name="Area2D2" parent="." instance=ExtResource("3_ouh6t")]
-position = Vector2(359, 407)
+[node name="SPeed" parent="." instance=ExtResource("3_ouh6t")]
+position = Vector2(298, 486)
 scale = Vector2(1.00362, 1)
 
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Area2D2" to="Player" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="SPeed" to="Player" method="_on_s_peed_body_entered"]
+[connection signal="body_exited" from="SPeed" to="Player" method="_on_s_peed_body_exited"]

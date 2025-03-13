@@ -19,10 +19,14 @@ var speed = 77
 @onready var animated_sprite_2d = $PENGOON
 @export var GRAVITY = 980
 
-func _on_area_2d_2_body_entered(body):
+func _on_s_peed_body_entered(body):
 	print("lemomns")
 	PLAYERMOVESPEED = PLAYERMOVESPEED * 2
-
+	SPRINT = SPRINT * 2
+func _on_s_peed_body_exited(body):
+	print("left")
+	PLAYERMOVESPEED = PLAYERMOVESPEED / 2
+	SPRINT = SPRINT / 2
 func _physics_process(delta):
 	# Gravity
 	if not is_on_floor():
@@ -51,7 +55,6 @@ func _physics_process(delta):
 	# Movement direction and sprint key detector
 	speed = SPRINT if Input.is_action_pressed("Sprint") else PLAYERMOVESPEED
 	var direction = Input.get_axis("MoveLeft", "MoveRight")
-
 	#Velocity based movement
 	if direction: 
 		velocity.x = move_toward(velocity.x, direction * speed, speed * ACCELERATION)
