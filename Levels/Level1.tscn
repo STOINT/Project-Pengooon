@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://cspxoaw67lxho"]
+[gd_scene load_steps=7 format=4 uid="uid://cspxoaw67lxho"]
 
 [ext_resource type="Texture2D" uid="uid://c8k8x8lo4sfs2" path="res://assets/Tilemaps/tilesheet1.png" id="1_ch6n1"]
+[ext_resource type="Texture2D" uid="uid://dyvsj8plcb0pm" path="res://assets/maybebackground.jpeg" id="1_th1hq"]
 [ext_resource type="PackedScene" uid="uid://b7ua6j4ujxs16" path="res://Character/Player.tscn" id="2_8785q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5882x"]
@@ -71,6 +72,13 @@ sources/1 = SubResource("TileSetAtlasSource_5882x")
 radius = 14.0357
 
 [node name="main" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -120.0
+offset_top = 4.0
+offset_right = 1260.0
+offset_bottom = 783.0
+texture = ExtResource("1_th1hq")
 
 [node name="Player" parent="." instance=ExtResource("2_8785q")]
 position = Vector2(74, 555)
