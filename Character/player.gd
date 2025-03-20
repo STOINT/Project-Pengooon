@@ -14,16 +14,16 @@ extends CharacterBody2D
 @export var WALLJUMP_VELOCITY = -260
 @export var Velocity = Vector2()
 @export var is_wall_sliding = false 
-var speed = 77
+@export var speed = 1
 #Other stuff
 @onready var animated_sprite_2d = $PENGOON
-@export var GRAVITY = 980
+var GRAVITY = 970
 
-func _on_s_peed_body_entered(body):
+func _on_area_2d_2_body_entered(body):
 	print("lemomns")
 	PLAYERMOVESPEED = PLAYERMOVESPEED * 2
 	SPRINT = SPRINT * 2
-func _on_s_peed_body_exited(body):
+func _on_area_2d_2_body_exited(body):
 	print("left")
 	PLAYERMOVESPEED = PLAYERMOVESPEED / 2
 	SPRINT = SPRINT / 2
