@@ -1,0 +1,164 @@
+[gd_scene load_steps=21 format=3 uid="uid://b1rgxoom5s4tl"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_iiosr"]
+[ext_resource type="Texture2D" uid="uid://d1f7gffni8c6t" path="res://icon.svg" id="2_v2exj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frjqw"]
+atlas = ExtResource("2_v2exj")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfeei"]
+atlas = ExtResource("2_v2exj")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dugjg"]
+atlas = ExtResource("2_v2exj")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtw8k"]
+atlas = ExtResource("2_v2exj")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hgw60"]
+atlas = ExtResource("2_v2exj")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4py2r"]
+atlas = ExtResource("2_v2exj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhbdr"]
+atlas = ExtResource("2_v2exj")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7m2n5"]
+atlas = ExtResource("2_v2exj")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ft4t6"]
+atlas = ExtResource("2_v2exj")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppkef"]
+atlas = ExtResource("2_v2exj")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_myiuc"]
+atlas = ExtResource("2_v2exj")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sr38e"]
+atlas = ExtResource("2_v2exj")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkxs5"]
+atlas = ExtResource("2_v2exj")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4god"]
+atlas = ExtResource("2_v2exj")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gka0"]
+atlas = ExtResource("2_v2exj")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71nxm"]
+atlas = ExtResource("2_v2exj")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3n63"]
+atlas = ExtResource("2_v2exj")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n0irm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frjqw")
+}],
+"loop": true,
+"name": &"NOTOUCHIE",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfeei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dugjg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtw8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hgw60")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4py2r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhbdr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7m2n5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ft4t6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppkef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_myiuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sr38e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pkxs5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4god")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gka0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71nxm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3n63")
+}],
+"loop": true,
+"name": &"TOUCHIE",
+"speed": 120.0
+}]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.0
+offset_right = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iiosr")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 503.0
+offset_top = 198.0
+offset_right = 661.0
+offset_bottom = 341.0
+
+[node name="StartButton" type="AnimatedSprite2D" parent="TextureButton"]
+position = Vector2(77, 72)
+sprite_frames = SubResource("SpriteFrames_n0irm")
+animation = &"NOTOUCHIE"
+
+[connection signal="mouse_entered" from="TextureButton" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_exited" from="TextureButton" to="." method="_on_texture_button_mouse_exited"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
