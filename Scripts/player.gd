@@ -20,6 +20,7 @@ extends CharacterBody2D
 var GRAVITY = 970
 
 func _physics_process(delta):
+	
 	# Gravity
 	if not is_on_floor():
 		velocity.y += GRAVITY * delta
@@ -68,18 +69,6 @@ func _physics_process(delta):
 		animated_sprite_2d.play("RunRight")
 	else: animated_sprite_2d.play("IdleRight")
 
-func _on_area_2d_body_entered(body):
-	get_tree().change_scene_to_file("res://Levels/Level2.tscn")
-	print("i changed scene right")
-func _on_speed_zone_2_body_entered(body: Node2D) -> void:
-	print("lemomns")
-	PLAYERMOVESPEED = PLAYERMOVESPEED * 2
-	SPRINT = SPRINT * 2
-func _on_area_2d_2_body_entered(body):
-	print("lemomns")
-	PLAYERMOVESPEED = PLAYERMOVESPEED * 2
-	SPRINT = SPRINT * 2
-func _on_area_2d_2_body_exited(body):
-	print("left")
-	PLAYERMOVESPEED = PLAYERMOVESPEED / 2
-	SPRINT = SPRINT / 2
+
+func _on_collectable_shrimp_body_entered(body: Node2D) -> void:
+	print("ef")

@@ -9,5 +9,5 @@ size = Vector2(224, 68)
 script = ExtResource("1_x01aq")
 
 [node name="Speed Zone HitBox" type="CollisionShape2D" parent="."]
-position = Vector2(102, 24)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_uuyxv")

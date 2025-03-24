@@ -312,19 +312,22 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_8gfac"]
 radius = 9.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Penguin" type="CharacterBody2D"]
 script = ExtResource("1_e34fk")
 JUMP_FATTY = 0.0
 
 [node name="PENGOON" type="AnimatedSprite2D" parent="."]
+position = Vector2(-10, -55)
 sprite_frames = SubResource("SpriteFrames_gbgf8")
 animation = &"IdleLeft"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 0)
+position = Vector2(-9, -54)
 shape = SubResource("CircleShape2D_8gfac")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-10, -56)
+scale = Vector2(0.870445, 1)
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0

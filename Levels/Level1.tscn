@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://cspxoaw67lxho"]
+[gd_scene load_steps=7 format=4 uid="uid://cspxoaw67lxho"]
 
 [ext_resource type="Texture2D" uid="uid://c8k8x8lo4sfs2" path="res://assets/Tilemaps/tilesheet1.png" id="1_ch6n1"]
 [ext_resource type="PackedScene" uid="uid://b7ua6j4ujxs16" path="res://Character/Player.tscn" id="2_8785q"]
-[ext_resource type="PackedScene" uid="uid://cf5svc5kw3nr8" path="res://Level Builder/Speed Zone.tscn" id="3_hp4yj"]
 [ext_resource type="PackedScene" uid="uid://sgr74eo2l2j4" path="res://Level Builder/Collectable Shrimp.tscn" id="4_ulxxx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5882x"]
@@ -75,7 +74,9 @@ radius = 14.0357
 [node name="main" type="Node2D"]
 
 [node name="Penguin" parent="." instance=ExtResource("2_8785q")]
-position = Vector2(102, 594)
+position = Vector2(192, 586)
+scale = Vector2(0.985999, 1.03692)
+JUMP_FATTY = 0.5
 
 [node name="World Builder" type="TileMapLayer" parent="."]
 position = Vector2(64, 25)
@@ -91,23 +92,28 @@ position = Vector2(700, 359)
 shape = SubResource("CircleShape2D_ncp48")
 
 [node name="World Border" type="StaticBody2D" parent="."]
+position = Vector2(-3, 2)
 
 [node name="World Border" type="CollisionPolygon2D" parent="World Border"]
 position = Vector2(0.568745, 0)
 scale = Vector2(1.00362, 1)
 polygon = PackedVector2Array(0.429699, 90, -120.134, 87, -121, 831, -2, 831)
 
-[node name="Speed Zone" parent="." instance=ExtResource("3_hp4yj")]
-position = Vector2(515, 425)
+[node name="Collectable shrimp4" parent="." instance=ExtResource("4_ulxxx")]
+position = Vector2(436, 521)
+scale = Vector2(1.00827, 1.08145)
 
-[node name="Collectable shrimp" parent="." instance=ExtResource("4_ulxxx")]
-position = Vector2(422, 516)
+[node name="Collectable shrimp3" parent="Collectable shrimp4" instance=ExtResource("4_ulxxx")]
+position = Vector2(-115, 33)
 
-[node name="Speed Zone2" parent="." instance=ExtResource("3_hp4yj")]
-position = Vector2(306, 489)
+[node name="Collectable shrimp2" parent="Collectable shrimp4" instance=ExtResource("4_ulxxx")]
+position = Vector2(-155, 54)
+
+[node name="Collectable shrimp" parent="Collectable shrimp4" instance=ExtResource("4_ulxxx")]
+position = Vector2(-69, 9)
 
 [connection signal="body_entered" from="Level Change" to="Penguin" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Speed Zone" to="Penguin" method="_on_area_2d_2_body_entered"]
-[connection signal="body_exited" from="Speed Zone" to="Penguin" method="_on_area_2d_2_body_exited"]
-[connection signal="body_entered" from="Speed Zone2" to="Penguin" method="_on_speed_zone_2_body_entered"]
-[connection signal="body_exited" from="Speed Zone2" to="Penguin" method="_on_speed_zone_2_body_exited"]
+[connection signal="body_entered" from="Collectable shrimp4" to="Penguin" method="_on_collectable_shrimp_body_entered"]
+[connection signal="body_entered" from="Collectable shrimp4/Collectable shrimp3" to="Penguin" method="_on_collectable_shrimp_body_entered"]
+[connection signal="body_entered" from="Collectable shrimp4/Collectable shrimp2" to="Penguin" method="_on_collectable_shrimp_body_entered"]
+[connection signal="body_entered" from="Collectable shrimp4/Collectable shrimp" to="Penguin" method="_on_collectable_shrimp_body_entered"]
