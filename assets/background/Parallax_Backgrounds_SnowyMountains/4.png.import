@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccrigdpchk11g"
-path="res://.godot/imported/player.png-e230e05e2d932a710303ee07f401e40f.ctex"
+uid="uid://cyp36ek6gyifx"
+path="res://.godot/imported/4.png-8b65582f6432951e14185d402c9a0a3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/player.png"
-dest_files=["res://.godot/imported/player.png-e230e05e2d932a710303ee07f401e40f.ctex"]
+source_file="res://assets/background/Parallax_Backgrounds_SnowyMountains/4.png"
+dest_files=["res://.godot/imported/4.png-8b65582f6432951e14185d402c9a0a3d.ctex"]
 
 [params]
 
