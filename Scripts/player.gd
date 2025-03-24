@@ -38,7 +38,6 @@ func _physics_process(delta):
 		elif is_wall_sliding and Input.is_action_just_pressed("Space"):
 			velocity.y = WALLJUMP_VELOCITY
 			velocity.x = WALLJUMP_FORCE * get_wall_normal().x 
-
 			
 	# Jumping
 	if Input.is_action_just_released("Space") and velocity.y < 0:
