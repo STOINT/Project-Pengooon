@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=4 uid="uid://cspxoaw67lxho"]
+[gd_scene load_steps=7 format=4 uid="uid://cspxoaw67lxho"]
 
 [ext_resource type="Texture2D" uid="uid://c8k8x8lo4sfs2" path="res://assets/Tilemaps/tilesheet1.png" id="1_ch6n1"]
 [ext_resource type="Texture2D" uid="uid://chji0up2so0r2" path="res://assets/background/Parallax_Backgrounds_SnowyMountains/0.png" id="1_rnscd"]
 [ext_resource type="PackedScene" uid="uid://b7ua6j4ujxs16" path="res://Character/Player.tscn" id="2_8785q"]
-[ext_resource type="Texture2D" uid="uid://7ha5p2tg4rnj" path="res://assets/shrimp.png" id="4_4ew1e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5882x"]
 texture = ExtResource("1_ch6n1")
@@ -108,36 +107,23 @@ position = Vector2(288, 73)
 position = Vector2(700, 359)
 shape = SubResource("CircleShape2D_ncp48")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Level Change" type="StaticBody2D" parent="."]
 
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Level Change"]
 position = Vector2(1.13955, 0)
 scale = Vector2(1.00725, 1)
 polygon = PackedVector2Array(0.429699, 90, -120.134, 87, -121, 831, -2, 831)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level Change"]
 position = Vector2(250, 293)
 scale = Vector2(2.10512, 0.177419)
 polygon = PackedVector2Array(0.429699, 90, -120.134, 87, -121, 831, -2, 831)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Level Change"]
 position = Vector2(0, 230)
 polygon = PackedVector2Array(-4, 88, 1150, 90, 1153, -5, -9, -2)
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Level Change"]
 polygon = PackedVector2Array(1154, 80, 1153, 727, 1279, 727, 1274, 89)
-
-[node name="Shrimp" type="Sprite2D" parent="."]
-position = Vector2(437, 518)
-scale = Vector2(0.9375, 0.9375)
-texture = ExtResource("4_4ew1e")
-
-[node name="Shrimp2" type="Sprite2D" parent="."]
-position = Vector2(830, 494)
-texture = ExtResource("4_4ew1e")
-
-[node name="Shrimp3" type="Sprite2D" parent="."]
-position = Vector2(641, 467)
-texture = ExtResource("4_4ew1e")
 
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
