@@ -52,6 +52,7 @@ offset_bottom = 348.0
 scale = Vector2(0.901676, 0.594642)
 
 [node name="StartButton" type="AnimatedSprite2D" parent="TextureButton"]
+position = Vector2(-27.7261, -12.4124)
 scale = Vector2(8.875, 8.875)
 sprite_frames = SubResource("SpriteFrames_n0irm")
 animation = &"NOTOUCHIE"
