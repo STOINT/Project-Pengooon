@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://cspxoaw67lxho"]
+[gd_scene load_steps=8 format=4 uid="uid://cspxoaw67lxho"]
 
 [ext_resource type="Texture2D" uid="uid://c8k8x8lo4sfs2" path="res://assets/Tilemaps/tilesheet1.png" id="1_ch6n1"]
 [ext_resource type="PackedScene" uid="uid://b7ua6j4ujxs16" path="res://Character/Player.tscn" id="2_8785q"]
 [ext_resource type="PackedScene" uid="uid://cf5svc5kw3nr8" path="res://Level Builder/Speed Zone.tscn" id="3_hp4yj"]
+[ext_resource type="PackedScene" uid="uid://sgr74eo2l2j4" path="res://Level Builder/Collectable Shrimp.tscn" id="4_ulxxx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5882x"]
 texture = ExtResource("1_ch6n1")
@@ -99,6 +100,14 @@ polygon = PackedVector2Array(0.429699, 90, -120.134, 87, -121, 831, -2, 831)
 [node name="Speed Zone" parent="." instance=ExtResource("3_hp4yj")]
 position = Vector2(515, 425)
 
+[node name="Collectable shrimp" parent="." instance=ExtResource("4_ulxxx")]
+position = Vector2(422, 516)
+
+[node name="Speed Zone2" parent="." instance=ExtResource("3_hp4yj")]
+position = Vector2(306, 489)
+
 [connection signal="body_entered" from="Level Change" to="Penguin" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Speed Zone" to="Penguin" method="_on_area_2d_2_body_entered"]
 [connection signal="body_exited" from="Speed Zone" to="Penguin" method="_on_area_2d_2_body_exited"]
+[connection signal="body_entered" from="Speed Zone2" to="Penguin" method="_on_speed_zone_2_body_entered"]
+[connection signal="body_exited" from="Speed Zone2" to="Penguin" method="_on_speed_zone_2_body_exited"]

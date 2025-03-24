@@ -19,14 +19,6 @@ extends CharacterBody2D
 @onready var animated_sprite_2d = $PENGOON
 var GRAVITY = 970
 
-func _on_area_2d_2_body_entered(body):
-	print("lemomns")
-	PLAYERMOVESPEED = PLAYERMOVESPEED * 2
-	SPRINT = SPRINT * 2
-func _on_area_2d_2_body_exited(body):
-	print("left")
-	PLAYERMOVESPEED = PLAYERMOVESPEED / 2
-	SPRINT = SPRINT / 2
 func _physics_process(delta):
 	# Gravity
 	if not is_on_floor():
@@ -79,3 +71,15 @@ func _physics_process(delta):
 func _on_area_2d_body_entered(body):
 	get_tree().change_scene_to_file("res://Levels/Level2.tscn")
 	print("i changed scene right")
+func _on_speed_zone_2_body_entered(body: Node2D) -> void:
+	print("lemomns")
+	PLAYERMOVESPEED = PLAYERMOVESPEED * 2
+	SPRINT = SPRINT * 2
+func _on_area_2d_2_body_entered(body):
+	print("lemomns")
+	PLAYERMOVESPEED = PLAYERMOVESPEED * 2
+	SPRINT = SPRINT * 2
+func _on_area_2d_2_body_exited(body):
+	print("left")
+	PLAYERMOVESPEED = PLAYERMOVESPEED / 2
+	SPRINT = SPRINT / 2
