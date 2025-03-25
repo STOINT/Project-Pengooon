@@ -74,8 +74,10 @@ func _physics_process(delta):
 	else: animated_sprite_2d.play("IdleRight")
 
 
-func _on_collectable_shrimp_body_entered(body: Node2D) -> void:
+func _on_collectable_shrimp_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	Shrimp += 1
 	print("XP: ", Shrimp)
 	var bob = str(Shrimp)
 	Swimp.emit(bob)
+func _on_area_2d_body_entered(body):
+	get_tree().change_scene_to_file("res://Levels/Level2.tscn")
