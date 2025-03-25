@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://cspxoaw67lxho"]
+[gd_scene load_steps=9 format=4 uid="uid://cspxoaw67lxho"]
 
 [ext_resource type="Texture2D" uid="uid://c8k8x8lo4sfs2" path="res://assets/Tilemaps/tilesheet1.png" id="1_ch6n1"]
 [ext_resource type="Texture2D" uid="uid://chji0up2so0r2" path="res://assets/background/Parallax_Backgrounds_SnowyMountains/0.png" id="1_rnscd"]
 [ext_resource type="PackedScene" uid="uid://b7ua6j4ujxs16" path="res://Character/Player.tscn" id="2_8785q"]
+[ext_resource type="Texture2D" uid="uid://c7abxcn2bxrqw" path="res://assets/sign.png" id="4_nyltm"]
+[ext_resource type="Texture2D" uid="uid://rorb5groqjlh" path="res://assets/shrimp.png" id="5_j7y71"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5882x"]
 texture = ExtResource("1_ch6n1")
@@ -92,7 +94,6 @@ texture = ExtResource("1_rnscd")
 
 [node name="Player" parent="." instance=ExtResource("2_8785q")]
 position = Vector2(74, 555)
-ChangeSceneTo = "res://Levels/Level2.tscn"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(64, 25)
@@ -125,5 +126,15 @@ polygon = PackedVector2Array(-4, 88, 1150, 90, 1153, -5, -9, -2)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Level Change"]
 polygon = PackedVector2Array(1154, 80, 1153, 727, 1279, 727, 1274, 89)
+
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(431, 528)
+scale = Vector2(0.624999, 0.624999)
+texture = ExtResource("4_nyltm")
+
+[node name="Shrimp" type="Sprite2D" parent="."]
+position = Vector2(478, 527)
+scale = Vector2(0.8125, 0.8125)
+texture = ExtResource("5_j7y71")
 
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
