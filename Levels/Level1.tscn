@@ -74,19 +74,19 @@ radius = 14.0357
 
 [node name="main" type="Node2D"]
 
-[node name="1" type="Sprite2D" parent="."]
-position = Vector2(1012.78, 417)
-scale = Vector2(1.75926, 1.75926)
-texture = ExtResource("1_rnscd")
+[node name="Parallax2D" type="Parallax2D" parent="."]
 
-[node name="2" type="Sprite2D" parent="."]
+[node name="Wold Border" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(-337, 417)
 scale = Vector2(1.75926, 1.75926)
 texture = ExtResource("1_rnscd")
 
-[node name="0" type="Sprite2D" parent="."]
-position = Vector2(337.778, 417)
-scale = Vector2(1.75926, 1.75926)
+[node name="1" type="Sprite2D" parent="Parallax2D/Wold Border"]
+position = Vector2(767.243, 0)
+texture = ExtResource("1_rnscd")
+
+[node name="0" type="Sprite2D" parent="Parallax2D/Wold Border"]
+position = Vector2(383.558, 0)
 texture = ExtResource("1_rnscd")
 
 [node name="My Parallax" type="Node2D" parent="."]
@@ -121,14 +121,230 @@ polygon = PackedVector2Array(0.429699, 90, -120.134, 87, -121, 831, -2, 831)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Level Change"]
 position = Vector2(0, 230)
-polygon = PackedVector2Array(-4, 88, 1150, 90, 1386, 436, 1153, -5, -9, -2)
+polygon = PackedVector2Array(-4, 88, 1150, 90, 1793, 355, 1153, -5, -9, -2)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Level Change"]
 position = Vector2(197, 31)
 polygon = PackedVector2Array(1154, 80, 1153, 727, 1279, 727, 1274, 89)
 
-[node name="Collectable shrimp" parent="." instance=ExtResource("4_2herk")]
-position = Vector2(427, 526)
+[node name="Collectable shrimp2" parent="." instance=ExtResource("4_2herk")]
+position = Vector2(399, 526)
+
+[node name="Collectable shrimp4" parent="Collectable shrimp2" instance=ExtResource("4_2herk")]
+position = Vector2(-87, 34)
+
+[node name="Collectable shrimp" parent="Collectable shrimp2" instance=ExtResource("4_2herk")]
+position = Vector2(33, -2)
+
+[node name="Collectable shrimp3" parent="Collectable shrimp2" instance=ExtResource("4_2herk")]
+position = Vector2(-34, 2)
+
+[node name="Collectable shrimp5" parent="Collectable shrimp2" instance=ExtResource("4_2herk")]
+position = Vector2(-61, 23)
+
+[node name="Collectable shrimp3" parent="." instance=ExtResource("4_2herk")]
+position = Vector2(395, 501)
+
+[node name="Collectable shrimp4" parent="Collectable shrimp3" instance=ExtResource("4_2herk")]
+position = Vector2(-87, 35)
+
+[node name="Collectable shrimp" parent="Collectable shrimp3" instance=ExtResource("4_2herk")]
+position = Vector2(33, -2)
+
+[node name="Collectable shrimp3" parent="Collectable shrimp3" instance=ExtResource("4_2herk")]
+position = Vector2(-34, 2)
+
+[node name="Collectable shrimp5" parent="Collectable shrimp3" instance=ExtResource("4_2herk")]
+position = Vector2(-61, 23)
+
+[node name="Collectable shrimp4" parent="." instance=ExtResource("4_2herk")]
+position = Vector2(391, 475)
+
+[node name="Collectable shrimp4" parent="Collectable shrimp4" instance=ExtResource("4_2herk")]
+position = Vector2(-87, 35)
+
+[node name="Collectable shrimp" parent="Collectable shrimp4" instance=ExtResource("4_2herk")]
+position = Vector2(33, -2)
+
+[node name="Collectable shrimp3" parent="Collectable shrimp4" instance=ExtResource("4_2herk")]
+position = Vector2(-34, 2)
+
+[node name="Collectable shrimp5" parent="Collectable shrimp4" instance=ExtResource("4_2herk")]
+position = Vector2(-61, 23)
+
+[node name="Collectable shrimp5" parent="." instance=ExtResource("4_2herk")]
+position = Vector2(250, 580)
+
+[node name="Collectable shrimp4" parent="Collectable shrimp5" instance=ExtResource("4_2herk")]
+position = Vector2(-87, 35)
+
+[node name="Collectable shrimp" parent="Collectable shrimp5" instance=ExtResource("4_2herk")]
+position = Vector2(33, -2)
+
+[node name="Collectable shrimp3" parent="Collectable shrimp5" instance=ExtResource("4_2herk")]
+position = Vector2(-34, 2)
+
+[node name="Collectable shrimp5" parent="Collectable shrimp5" instance=ExtResource("4_2herk")]
+position = Vector2(-61, 23)
+
+[node name="Collectable shrimp6" parent="." instance=ExtResource("4_2herk")]
+position = Vector2(242, 550)
+
+[node name="Collectable shrimp4" parent="Collectable shrimp6" instance=ExtResource("4_2herk")]
+position = Vector2(-87, 35)
+
+[node name="Collectable shrimp" parent="Collectable shrimp6" instance=ExtResource("4_2herk")]
+position = Vector2(33, -2)
+
+[node name="Collectable shrimp3" parent="Collectable shrimp6" instance=ExtResource("4_2herk")]
+position = Vector2(-34, 2)
+
+[node name="Collectable shrimp5" parent="Collectable shrimp6" instance=ExtResource("4_2herk")]
+position = Vector2(-61, 23)
+
+[node name="Collectable shrimp7" parent="." instance=ExtResource("4_2herk")]
+position = Vector2(234, 521)
+
+[node name="Collectable shrimp4" parent="Collectable shrimp7" instance=ExtResource("4_2herk")]
+position = Vector2(-87, 35)
+
+[node name="Collectable shrimp" parent="Collectable shrimp7" instance=ExtResource("4_2herk")]
+position = Vector2(33, -2)
+
+[node name="Collectable shrimp3" parent="Collectable shrimp7" instance=ExtResource("4_2herk")]
+position = Vector2(-34, 2)
+
+[node name="Collectable shrimp5" parent="Collectable shrimp7" instance=ExtResource("4_2herk")]
+position = Vector2(-61, 23)
+
+[node name="Collectable shrimp8" parent="." instance=ExtResource("4_2herk")]
+position = Vector2(86, 584)
+
+[node name="Collectable shrimp4" parent="Collectable shrimp8" instance=ExtResource("4_2herk")]
+position = Vector2(-87, 35)
+
+[node name="Collectable shrimp" parent="Collectable shrimp8" instance=ExtResource("4_2herk")]
+position = Vector2(33, -2)
+
+[node name="Collectable shrimp3" parent="Collectable shrimp8" instance=ExtResource("4_2herk")]
+position = Vector2(-34, 2)
+
+[node name="Collectable shrimp5" parent="Collectable shrimp8" instance=ExtResource("4_2herk")]
+position = Vector2(-61, 23)
+
+[node name="Collectable shrimp9" parent="." instance=ExtResource("4_2herk")]
+position = Vector2(88, 545)
+
+[node name="Collectable shrimp4" parent="Collectable shrimp9" instance=ExtResource("4_2herk")]
+position = Vector2(-87, 35)
+
+[node name="Collectable shrimp" parent="Collectable shrimp9" instance=ExtResource("4_2herk")]
+position = Vector2(33, -2)
+
+[node name="Collectable shrimp3" parent="Collectable shrimp9" instance=ExtResource("4_2herk")]
+position = Vector2(-34, 2)
+
+[node name="Collectable shrimp5" parent="Collectable shrimp9" instance=ExtResource("4_2herk")]
+position = Vector2(-61, 23)
+
+[node name="Collectable shrimp10" parent="." instance=ExtResource("4_2herk")]
+position = Vector2(92, 518)
+
+[node name="Collectable shrimp4" parent="Collectable shrimp10" instance=ExtResource("4_2herk")]
+position = Vector2(-87, 35)
+
+[node name="Collectable shrimp" parent="Collectable shrimp10" instance=ExtResource("4_2herk")]
+position = Vector2(33, -2)
+
+[node name="Collectable shrimp3" parent="Collectable shrimp10" instance=ExtResource("4_2herk")]
+position = Vector2(-34, 2)
+
+[node name="Collectable shrimp5" parent="Collectable shrimp10" instance=ExtResource("4_2herk")]
+position = Vector2(-61, 23)
+
+[node name="Collectable shrimp11" parent="." instance=ExtResource("4_2herk")]
+position = Vector2(94, 486)
+
+[node name="Collectable shrimp4" parent="Collectable shrimp11" instance=ExtResource("4_2herk")]
+position = Vector2(-87, 35)
+
+[node name="Collectable shrimp" parent="Collectable shrimp11" instance=ExtResource("4_2herk")]
+position = Vector2(33, -2)
+
+[node name="Collectable shrimp3" parent="Collectable shrimp11" instance=ExtResource("4_2herk")]
+position = Vector2(-34, 2)
+
+[node name="Collectable shrimp5" parent="Collectable shrimp11" instance=ExtResource("4_2herk")]
+position = Vector2(-61, 23)
+
+[node name="Collectable shrimp12" parent="." instance=ExtResource("4_2herk")]
+position = Vector2(237, 486)
+
+[node name="Collectable shrimp4" parent="Collectable shrimp12" instance=ExtResource("4_2herk")]
+position = Vector2(-87, 35)
+
+[node name="Collectable shrimp" parent="Collectable shrimp12" instance=ExtResource("4_2herk")]
+position = Vector2(33, -2)
+
+[node name="Collectable shrimp3" parent="Collectable shrimp12" instance=ExtResource("4_2herk")]
+position = Vector2(-34, 2)
+
+[node name="Collectable shrimp5" parent="Collectable shrimp12" instance=ExtResource("4_2herk")]
+position = Vector2(-61, 23)
 
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
-[connection signal="body_shape_entered" from="Collectable shrimp" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp2" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp2/Collectable shrimp4" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp2/Collectable shrimp" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp2/Collectable shrimp3" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp2/Collectable shrimp5" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp3" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp3/Collectable shrimp4" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp3/Collectable shrimp" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp3/Collectable shrimp3" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp3/Collectable shrimp5" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp4" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp4/Collectable shrimp4" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp4/Collectable shrimp" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp4/Collectable shrimp3" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp4/Collectable shrimp5" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp5" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp5/Collectable shrimp4" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp5/Collectable shrimp" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp5/Collectable shrimp3" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp5/Collectable shrimp5" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp6" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp6/Collectable shrimp4" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp6/Collectable shrimp" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp6/Collectable shrimp3" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp6/Collectable shrimp5" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp7" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp7/Collectable shrimp4" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp7/Collectable shrimp" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp7/Collectable shrimp3" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp7/Collectable shrimp5" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp8" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp8/Collectable shrimp4" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp8/Collectable shrimp" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp8/Collectable shrimp3" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp8/Collectable shrimp5" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp9" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp9/Collectable shrimp4" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp9/Collectable shrimp" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp9/Collectable shrimp3" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp9/Collectable shrimp5" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp10" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp10/Collectable shrimp4" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp10/Collectable shrimp" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp10/Collectable shrimp3" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp10/Collectable shrimp5" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp11" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp11/Collectable shrimp4" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp11/Collectable shrimp" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp11/Collectable shrimp3" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp11/Collectable shrimp5" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp12" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp12/Collectable shrimp4" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp12/Collectable shrimp" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp12/Collectable shrimp3" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
+[connection signal="body_shape_entered" from="Collectable shrimp12/Collectable shrimp5" to="Player" method="_on_collectable_shrimp_body_shape_entered"]
