@@ -1,9 +1,10 @@
-[gd_scene load_steps=45 format=3 uid="uid://b7ua6j4ujxs16"]
+[gd_scene load_steps=47 format=3 uid="uid://b7ua6j4ujxs16"]
 
-[ext_resource type="Script" path="res://Character/player.gd" id="1_e34fk"]
-[ext_resource type="Texture2D" uid="uid://ccrigdpchk11g" path="res://assets/player/player.png" id="1_vgsnj"]
-[ext_resource type="Texture2D" uid="uid://but2g363ut6kl" path="res://assets/player/playerflipped.png" id="3_c7xx3"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_e34fk"]
+[ext_resource type="Texture2D" uid="uid://ccrigdpchk11g" path="res://assets/player.png" id="1_vgsnj"]
+[ext_resource type="Texture2D" uid="uid://but2g363ut6kl" path="res://assets/playerflipped.png" id="3_c7xx3"]
 [ext_resource type="Texture2D" uid="uid://d1f7gffni8c6t" path="res://icon.svg" id="4_u6ddn"]
+[ext_resource type="Script" path="res://Scripts/Shrimp Counter.gd" id="5_atrr8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_25mpw"]
 atlas = ExtResource("3_c7xx3")
@@ -175,6 +176,11 @@ animations = [{
 "name": &"IdleRight",
 "speed": 1.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kkt14")
@@ -309,19 +315,45 @@ animations = [{
 "speed": 120.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_xd6i6"]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_8gfac"]
 radius = 9.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Penguin" type="CharacterBody2D"]
 script = ExtResource("1_e34fk")
 JUMP_FATTY = 0.0
 
 [node name="PENGOON" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gbgf8")
-animation = &"IdleLeft"
+animation = &"Jump"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="PENGOON"]
+
+[node name="Shrimp Counter" type="Control" parent="PENGOON/CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = -576.0
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_atrr8")
+
+[node name="Label" type="Label" parent="PENGOON/CanvasLayer/Shrimp Counter"]
+layout_mode = 0
+offset_right = 26.0
+offset_bottom = 23.0
+text = "yes
+"
+label_settings = SubResource("LabelSettings_xd6i6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_8gfac")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -335,3 +367,5 @@ drag_left_margin = 0.1
 drag_top_margin = 0.1
 drag_right_margin = 0.1
 drag_bottom_margin = 0.1
+
+[connection signal="Swimp" from="." to="PENGOON/CanvasLayer/Shrimp Counter" method="_on_penguin_swimp"]

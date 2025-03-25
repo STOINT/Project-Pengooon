@@ -1,7 +1,8 @@
 [gd_scene load_steps=15 format=3 uid="uid://dttg5u6t8ujvv"]
 
-[ext_resource type="Script" path="res://Spood.gd" id="1_5e0vu"]
+[ext_resource type="Script" path="res://Scripts/Spood.gd" id="1_5e0vu"]
 [ext_resource type="Texture2D" uid="uid://d1f7gffni8c6t" path="res://icon.svg" id="2_7g31u"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nib5r"]
 atlas = ExtResource("2_7g31u")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://sgr74eo2l2j4"]
+
+[ext_resource type="Texture2D" uid="uid://rorb5groqjlh" path="res://assets/shrimp.png" id="1_mr2px"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pwryj"]
+
+[node name="Collectable shrimp" type="Area2D"]
+
+[node name="Shrimp" type="Sprite2D" parent="."]
+position = Vector2(-2, 0)
+texture = ExtResource("1_mr2px")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_pwryj")
