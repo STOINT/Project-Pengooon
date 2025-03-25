@@ -69,6 +69,8 @@ func _physics_process(delta):
 		animated_sprite_2d.play("RunLeft")
 	elif direction == 1:
 		animated_sprite_2d.play("RunRight")
+	elif Input.is_action_pressed("Jump") and direction == -1:
+		animated_sprite_2d.play("Jump")
 	else: animated_sprite_2d.play("IdleRight")
 
 
