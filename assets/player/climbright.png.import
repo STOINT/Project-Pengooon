@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://drdj2c71g7uvw"
+=======
+uid="uid://b4not2qhxnb4d"
+>>>>>>> origin/EZZZZZZZZZZPEZZZZZ
 path="res://.godot/imported/climbright.png-60e7f8219cbf3087841d80c6a68f0d42.ctex"
 metadata={
 "vram_texture": false

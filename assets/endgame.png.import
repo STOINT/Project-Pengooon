@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://d241n2od70cog"
-=======
-uid="uid://dbhmftoys1m1p"
->>>>>>> origin/EZZZZZZZZZZPEZZZZZ
-path="res://.godot/imported/climbrightflipped.png-aef521c492fcf6ca3a218f8dc584495b.ctex"
+uid="uid://dt3i8cmw3olnq"
+path="res://.godot/imported/endgame.png-dceade434efefcd17f00b223f311ea6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/climbrightflipped.png"
-dest_files=["res://.godot/imported/climbrightflipped.png-aef521c492fcf6ca3a218f8dc584495b.ctex"]
+source_file="res://assets/endgame.png"
+dest_files=["res://.godot/imported/endgame.png-dceade434efefcd17f00b223f311ea6a.ctex"]
 
 [params]
 
