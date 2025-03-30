@@ -638,7 +638,7 @@ tile_map_data = PackedByteArray("AACqAAoAAAAJAAQAAACrAA8AAAAJAAIAAACtAAQAAAAJAAQ
 tile_set = SubResource("TileSet_seq5c")
 
 [node name="Player" parent="." instance=ExtResource("2_8785q")]
-position = Vector2(1681, 428)
+position = Vector2(259, 553)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(288, 73)
@@ -677,6 +677,10 @@ polygon = PackedVector2Array(-4, 88, 5030.15, 62, 4721.35, -3, -9, -2)
 [node name="Sign" type="Sprite2D" parent="."]
 position = Vector2(375, 559)
 scale = Vector2(0.78125, 0.78125)
+texture = ExtResource("8_y3u1p")
+
+[node name="Sign2" type="Sprite2D" parent="."]
+position = Vector2(1566, 448)
 texture = ExtResource("8_y3u1p")
 
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]

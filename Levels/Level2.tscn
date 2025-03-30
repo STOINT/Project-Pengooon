@@ -297,7 +297,7 @@ tile_set = SubResource("TileSet_vvix7")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(222, -146)
+position = Vector2(170, 0)
 shape = SubResource("RectangleShape2D_eny74")
 
 [node name="Player" parent="." instance=ExtResource("19_fjwfx")]
