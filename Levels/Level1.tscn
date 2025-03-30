@@ -659,6 +659,11 @@ position = Vector2(5767, 127)
 scale = Vector2(1.00725, 1)
 polygon = PackedVector2Array(0.429699, 90, -120.134, 87, -121, 831, -2, 831, 10.7823, 463)
 
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Level Change"]
+position = Vector2(5767, 127)
+scale = Vector2(1.00725, 1)
+polygon = PackedVector2Array(0.429699, 90, -120.134, 87, -121, 831, -2, 831, 10.7823, 463)
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level Change"]
 position = Vector2(250, 293)
 scale = Vector2(2.10512, 0.177419)
