@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwp6w2py0gjgx"
-path="res://.godot/imported/player_jumpflipped.png-22bb74b0bae670037841888a04eccc6d.ctex"
+uid="uid://dwf2neve8vyet"
+path="res://.godot/imported/shrimpspritesheet.png-fd84d0da681cc6096ecd0c065abd074b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/player_jumpflipped.png"
-dest_files=["res://.godot/imported/player_jumpflipped.png-22bb74b0bae670037841888a04eccc6d.ctex"]
+source_file="res://assets/shrimpspritesheet.png"
+dest_files=["res://.godot/imported/shrimpspritesheet.png-fd84d0da681cc6096ecd0c065abd074b.ctex"]
 
 [params]
 
