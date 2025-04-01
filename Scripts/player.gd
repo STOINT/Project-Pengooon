@@ -59,8 +59,10 @@ func _physics_process(delta):
 	Velocity = move_and_slide()
 
 	# Animations
-	if is_wall_sliding:
-		animated_sprite_2d.play("WallSlide")
+	if is_wall_sliding == true and direction == 1:
+		animated_sprite_2d.play("WallSlideLeft")
+	elif is_wall_sliding == true and direction == -1:
+		animated_sprite_2d.play("WallSlideRight")
 	elif Input.is_action_pressed("Sprint") and direction == -1:
 		animated_sprite_2d.play("SprintLeft")
 	elif Input.is_action_pressed("Sprint") and direction == 1:
