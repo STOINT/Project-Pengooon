@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Penguin extends CharacterBody2D
 
 #Base movement variables
 @export_range(0, 1) var DECELERATION = .1 #base movment start
@@ -18,8 +18,6 @@ extends CharacterBody2D
 #Other stuff
 @onready var animated_sprite_2d = $PENGOON
 var GRAVITY = 970
-var Shrimp = 0
-signal Swimp (Shrimp) 
 
 func _physics_process(delta):
 	
@@ -76,10 +74,11 @@ func _physics_process(delta):
 	else: animated_sprite_2d.play("IdleRight")
 
 
-func _on_collectable_shrimp_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	Shrimp += 1
-	print("XP: ", Shrimp)
-	var bob = str(Shrimp)
-	Swimp.emit(bob)
-func _on_area_2d_body_entered(body):
+func _on_portal_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://Levels/Level2.tscn")
+
+func _on_portal_2_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://Levels/Level2.tscn")
+
+func _on_portal_3_body_entered(body: Node2D) -> void:
 	get_tree().change_scene_to_file("res://Levels/Level2.tscn")

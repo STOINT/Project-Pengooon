@@ -1,11 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckiw4gmhq3fkn"]
+[gd_scene load_steps=3 format=3 uid="uid://3vitv7t8h2qh"]
 
-[ext_resource type="Script" path="res://Scripts/Shrimp Counter.gd" id="1_mm467"]
+[ext_resource type="Script" path="res://shrimp_counter.gd" id="1_rlts0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xd6i6"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
-script = ExtResource("1_mm467")
 
 [node name="Shrimp Counter" type="Control" parent="."]
 layout_mode = 3
@@ -20,6 +19,7 @@ offset_right = -576.0
 offset_bottom = -324.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rlts0")
 
 [node name="Label" type="Label" parent="Shrimp Counter"]
 layout_mode = 0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://sgr74eo2l2j4"]
 
 [ext_resource type="Texture2D" uid="uid://dwf2neve8vyet" path="res://assets/shrimpspritesheet.png" id="1_8qy3m"]
-[ext_resource type="Script" path="res://Level Builder/node_2d.gd" id="1_amnk2"]
+[ext_resource type="Script" path="res://Level Builder/collectable_shrimp.gd" id="1_lr0dp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ce782"]
 atlas = ExtResource("1_8qy3m")
@@ -128,22 +128,28 @@ animations = [{
 "loop": true,
 "name": &"ShrimpBob",
 "speed": 50.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pwryj"]
 
-[node name="Collectable shrimp" type="Area2D"]
+[node name="Collectable shrimp" type="Node2D"]
+script = ExtResource("1_lr0dp")
 
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2(-1, 0)
-script = ExtResource("1_amnk2")
-
-[node name="Shimp" type="AnimatedSprite2D" parent="Node2D"]
-position = Vector2(-1, -4)
+[node name="Shimp" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, -4)
 sprite_frames = SubResource("SpriteFrames_3dorh")
-animation = &"ShrimpBob"
-frame_progress = 0.838611
+animation = &"new_animation"
+autoplay = "ShrimpBob"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Node2D" type="Area2D" parent="."]
 position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D"]
 shape = SubResource("CircleShape2D_pwryj")
+
+[connection signal="body_entered" from="Node2D" to="." method="_on_node_2d_body_entered"]
