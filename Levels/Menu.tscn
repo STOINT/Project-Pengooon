@@ -1,9 +1,94 @@
-[gd_scene load_steps=24 format=3 uid="uid://b1rgxoom5s4tl"]
+[gd_scene load_steps=36 format=3 uid="uid://b1rgxoom5s4tl"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_iiosr"]
-[ext_resource type="Texture2D" uid="uid://dyvsj8plcb0pm" path="res://assets/maybebackground.jpeg" id="2_cwgm6"]
+[ext_resource type="Texture2D" uid="uid://chuwlfd2kop87" path="res://assets/background/startbackgroundspritesheet.png" id="2_0l320"]
 [ext_resource type="Texture2D" uid="uid://csdsnfhoytkyj" path="res://assets/button.png" id="2_eimss"]
 [ext_resource type="Texture2D" uid="uid://d1f7gffni8c6t" path="res://icon.svg" id="2_v2exj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g08be"]
+atlas = ExtResource("2_0l320")
+region = Rect2(0, 0, 384, 216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6yksy"]
+atlas = ExtResource("2_0l320")
+region = Rect2(384, 0, 384, 216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdlu7"]
+atlas = ExtResource("2_0l320")
+region = Rect2(0, 216, 384, 216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdkme"]
+atlas = ExtResource("2_0l320")
+region = Rect2(384, 216, 384, 216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83aiv"]
+atlas = ExtResource("2_0l320")
+region = Rect2(0, 432, 384, 216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xiv02"]
+atlas = ExtResource("2_0l320")
+region = Rect2(384, 432, 384, 216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vqyi"]
+atlas = ExtResource("2_0l320")
+region = Rect2(0, 648, 384, 216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtxxe"]
+atlas = ExtResource("2_0l320")
+region = Rect2(384, 648, 384, 216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wl7ks"]
+atlas = ExtResource("2_0l320")
+region = Rect2(0, 864, 384, 216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oten6"]
+atlas = ExtResource("2_0l320")
+region = Rect2(384, 864, 384, 216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwcab"]
+atlas = ExtResource("2_0l320")
+region = Rect2(0, 1080, 384, 216)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l4yce"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g08be")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6yksy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdlu7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdkme")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83aiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xiv02")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vqyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtxxe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wl7ks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oten6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwcab")
+}],
+"loop": true,
+"name": &"default",
+"speed": 120.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g8g87"]
 atlas = ExtResource("2_eimss")
@@ -156,22 +241,25 @@ grow_vertical = 2
 script = ExtResource("1_iiosr")
 metadata/_edit_use_anchors_ = true
 
-[node name="Bakground" type="Sprite2D" parent="."]
-position = Vector2(1866, 317)
-texture = ExtResource("2_cwgm6")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1829.5, 324.5)
+scale = Vector2(3.01302, 3.01389)
+sprite_frames = SubResource("SpriteFrames_l4yce")
+autoplay = "default"
+frame_progress = 0.692493
 
 [node name="StartButton" type="AnimatedSprite2D" parent="."]
-position = Vector2(1849.88, 366.5)
-scale = Vector2(11.2197, 10.0625)
+position = Vector2(1843.56, 331.25)
+scale = Vector2(8.45834, 6.90625)
 sprite_frames = SubResource("SpriteFrames_n0irm")
 animation = &"NOTOUCHIE"
 autoplay = "NOTOUCHIE"
 
 [node name="TextureButton" type="TextureButton" parent="StartButton"]
-offset_left = -15.6756
-offset_top = -6.70807
-offset_right = 336.324
-offset_bottom = 136.292
+offset_left = -14.8845
+offset_top = -7.25466
+offset_right = 16.1155
+offset_bottom = 6.74534
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1827, 325)

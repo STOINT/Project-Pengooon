@@ -76,10 +76,9 @@ scale = Vector2(1.68598, 1.64749)
 script = ExtResource("1_br537")
 
 [node name="Portal" type="AnimatedSprite2D" parent="Node2D"]
-scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_8pty4")
 animation = &"PortalWoosh"
-frame_progress = 0.615727
+frame_progress = 0.615853
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1.05968, 1.96914)

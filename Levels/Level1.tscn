@@ -632,7 +632,7 @@ tile_map_data = PackedByteArray("AABVAAQAAAAJAAMAAABXAAUAAAAJAAQAAABjAAQAAAAJAAI
 tile_set = SubResource("TileSet_seq5c")
 
 [node name="Penguin" parent="." instance=ExtResource("2_8785q")]
-position = Vector2(259, 553)
+position = Vector2(157, 579)
 
 [node name="World Border" type="StaticBody2D" parent="."]
 
@@ -651,23 +651,22 @@ position = Vector2(2439.05, 230)
 scale = Vector2(0.0888047, 1)
 polygon = PackedVector2Array(-4, 88, 5030.15, 62, 4721.35, -3, 2037.63, 41, -9, -2)
 
-[node name="Shrimp" parent="." instance=ExtResource("8_ulunk")]
-position = Vector2(399, 168)
-
-[node name="Shrimp3" parent="Shrimp" instance=ExtResource("8_ulunk")]
-position = Vector2(30, 375)
-
-[node name="Shrimp2" parent="Shrimp" instance=ExtResource("8_ulunk")]
-position = Vector2(-18, 368)
-
-[node name="Shrimp4" parent="Shrimp" instance=ExtResource("8_ulunk")]
-position = Vector2(67, 372)
-
 [node name="Portal" parent="." instance=ExtResource("9_53wme")]
 position = Vector2(3722, 409)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource("10_v1c3f")]
+
+[node name="click one of the shrimps and ctr D" type="Node" parent="."]
+
+[node name="Collectable shrimp3" parent="click one of the shrimps and ctr D" instance=ExtResource("8_ulunk")]
+position = Vector2(384, 544)
+
+[node name="Collectable shrimp" parent="click one of the shrimps and ctr D" instance=ExtResource("8_ulunk")]
+position = Vector2(324, 546)
+
+[node name="Collectable shrimp2" parent="click one of the shrimps and ctr D" instance=ExtResource("8_ulunk")]
+position = Vector2(350, 544)
 
 [connection signal="body_entered" from="Portal" to="Penguin" method="_on_portal_body_entered"]

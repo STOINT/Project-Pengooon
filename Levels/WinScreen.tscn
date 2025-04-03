@@ -5,8 +5,8 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Endgame" type="Sprite2D" parent="."]
-position = Vector2(1.51677, 114.71)
-scale = Vector2(2.57354, 2.18097)
+position = Vector2(36.5, 5)
+scale = Vector2(1.54875, 1.21333)
 texture = ExtResource("1_7gu6y")
 
 [node name="Camera2D" type="Camera2D" parent="."]

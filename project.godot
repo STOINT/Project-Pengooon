@@ -21,6 +21,10 @@ AudioController="*res://audio_controller.tscn"
 GameController="*res://Game Controller.gd"
 EventController="*res://event controller.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 Space={
