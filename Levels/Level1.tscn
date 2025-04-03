@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://cspxoaw67lxho"]
+[gd_scene load_steps=20 format=4 uid="uid://cspxoaw67lxho"]
 
 [ext_resource type="Texture2D" uid="uid://c8k8x8lo4sfs2" path="res://assets/Tilemaps/tilesheet1.png" id="1_ch6n1"]
 [ext_resource type="Script" path="res://Levels/world.gd" id="1_qpbs2"]
@@ -9,8 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c7l6llh1v8ap5" path="res://assets/Tilemaps/backgroundtileunderground.png" id="6_4wvop"]
 [ext_resource type="PackedScene" uid="uid://sgr74eo2l2j4" path="res://Level Builder/Collectable Shrimp.tscn" id="8_ulunk"]
 [ext_resource type="PackedScene" uid="uid://cs53wsbjs7lcx" path="res://Portal.tscn" id="9_53wme"]
-[ext_resource type="Script" path="res://shrimp_counter.gd" id="10_2vmwt"]
-[ext_resource type="Texture2D" uid="uid://rorb5groqjlh" path="res://assets/shrimp.png" id="11_l1eyr"]
+[ext_resource type="PackedScene" uid="uid://dqe4hgvle00uy" path="res://CoinUI.tscn" id="10_v1c3f"]
 
 [sub_resource type="GDScript" id="GDScript_ieep0"]
 script/source = "extends Sprite2D
@@ -652,52 +651,23 @@ position = Vector2(2439.05, 230)
 scale = Vector2(0.0888047, 1)
 polygon = PackedVector2Array(-4, 88, 5030.15, 62, 4721.35, -3, 2037.63, 41, -9, -2)
 
+[node name="Shrimp" parent="." instance=ExtResource("8_ulunk")]
+position = Vector2(399, 168)
+
+[node name="Shrimp3" parent="Shrimp" instance=ExtResource("8_ulunk")]
+position = Vector2(30, 375)
+
+[node name="Shrimp2" parent="Shrimp" instance=ExtResource("8_ulunk")]
+position = Vector2(-18, 368)
+
+[node name="Shrimp4" parent="Shrimp" instance=ExtResource("8_ulunk")]
+position = Vector2(67, 372)
+
 [node name="Portal" parent="." instance=ExtResource("9_53wme")]
 position = Vector2(3722, 409)
 
-[node name="Collectable shrimp4" parent="." instance=ExtResource("8_ulunk")]
-position = Vector2(434, 555)
-
-[node name="Collectable shrimp2" parent="Collectable shrimp4" instance=ExtResource("8_ulunk")]
-position = Vector2(-73, -1)
-
-[node name="Collectable shrimp5" parent="Collectable shrimp4" instance=ExtResource("8_ulunk")]
-position = Vector2(35, 2)
-
-[node name="Collectable shrimp3" parent="Collectable shrimp4" instance=ExtResource("8_ulunk")]
-position = Vector2(-32, -4)
-
-[node name="Collectable shrimp" parent="Collectable shrimp4" instance=ExtResource("8_ulunk")]
-position = Vector2(-117, -2)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Shrimp Counter" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 30.0
-offset_top = 30.0
-offset_right = 70.0
-offset_bottom = 70.0
-script = ExtResource("10_2vmwt")
-
-[node name="Counter" type="Label" parent="CanvasLayer/Shrimp Counter"]
-layout_mode = 0
-offset_left = 30.0
-offset_top = 5.0
-offset_right = 54.0
-offset_bottom = 28.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-text = "0
-"
-horizontal_alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Shrimp Counter"]
-layout_mode = 0
-offset_right = 30.0
-offset_bottom = 30.0
-texture = ExtResource("11_l1eyr")
-expand_mode = 1
-stretch_mode = 1
+[node name="Control" parent="CanvasLayer" instance=ExtResource("10_v1c3f")]
 
 [connection signal="body_entered" from="Portal" to="Penguin" method="_on_portal_body_entered"]

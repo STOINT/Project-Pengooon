@@ -1,3 +1,3 @@
 extends Node
 
-signal Shrimp_Collected(value: int)
+signal coin_collected(value: int)

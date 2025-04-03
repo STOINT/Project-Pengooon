@@ -4,5 +4,5 @@ extends Node2D
 
 func _on_node_2d_body_entered(body: Node2D) -> void:
 	if body is Penguin:
-		GameController.Shrimp_Collected(value)
+		GameController.coin_collected(value)
 		self.queue_free()
