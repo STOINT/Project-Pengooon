@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dycpx6yssqm5y"]
+
+[ext_resource type="Texture2D" uid="uid://dt3i8cmw3olnq" path="res://assets/endgame.png" id="1_7gu6y"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Endgame" type="Sprite2D" parent="."]
+position = Vector2(36.5, 5)
+scale = Vector2(1.54875, 1.21333)
+texture = ExtResource("1_7gu6y")
+
+[node name="Camera2D" type="Camera2D" parent="."]
