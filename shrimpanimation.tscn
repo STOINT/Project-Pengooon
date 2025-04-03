@@ -140,6 +140,6 @@ sprite_frames = SubResource("SpriteFrames_0hjln")
 animation = &"shrimp"
 frame_progress = 0.131877
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 2)
 shape = SubResource("CircleShape2D_bq8rh")
