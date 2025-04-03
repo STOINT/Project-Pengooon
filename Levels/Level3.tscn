@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://ba01v8te5usec"]
+[gd_scene load_steps=15 format=4 uid="uid://ba01v8te5usec"]
 
 [ext_resource type="Texture2D" uid="uid://dg8bf4kp45yt2" path="res://assets/Tilemaps/Tilesheet.png" id="1_0re7w"]
 [ext_resource type="Texture2D" uid="uid://c8k8x8lo4sfs2" path="res://assets/Tilemaps/tilesheet1.png" id="2_ha5be"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://3ay75xm7jrwu" path="res://assets/Tilemaps/tileset3.png" id="4_kk74j"]
 [ext_resource type="Texture2D" uid="uid://c4t31q5midxnf" path="res://assets/Tilemaps/updatedsnowtiles.png" id="5_d05ov"]
 [ext_resource type="Texture2D" uid="uid://chji0up2so0r2" path="res://assets/background/Parallax_Backgrounds_SnowyMountains/0.png" id="6_a4afv"]
+[ext_resource type="PackedScene" uid="uid://6kmj0oo1hrii" path="res://Level Builder/portal.tscn" id="8_kqrb2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3txx6"]
 texture = ExtResource("1_0re7w")
@@ -239,3 +240,6 @@ tile_set = SubResource("TileSet_8fd8x")
 
 [node name="Player" parent="." instance=ExtResource("3_wyb3o")]
 position = Vector2(-51, 85)
+
+[node name="Node2D" parent="." instance=ExtResource("8_kqrb2")]
+position = Vector2(2674, 1610)

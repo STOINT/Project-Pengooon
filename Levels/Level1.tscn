@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://cspxoaw67lxho"]
+[gd_scene load_steps=20 format=4 uid="uid://cspxoaw67lxho"]
 
 [ext_resource type="Texture2D" uid="uid://c8k8x8lo4sfs2" path="res://assets/Tilemaps/tilesheet1.png" id="1_ch6n1"]
 [ext_resource type="Script" path="res://Levels/world.gd" id="1_qpbs2"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c4t31q5midxnf" path="res://assets/Tilemaps/updatedsnowtiles.png" id="4_r5s53"]
 [ext_resource type="Texture2D" uid="uid://c7l6llh1v8ap5" path="res://assets/Tilemaps/backgroundtileunderground.png" id="6_4wvop"]
 [ext_resource type="Texture2D" uid="uid://c7abxcn2bxrqw" path="res://assets/sign.png" id="8_y3u1p"]
+[ext_resource type="PackedScene" uid="uid://6kmj0oo1hrii" path="res://Level Builder/portal.tscn" id="9_14tg6"]
 
 [sub_resource type="GDScript" id="GDScript_ieep0"]
 script/source = "extends Sprite2D
@@ -700,5 +701,8 @@ polygon = PackedVector2Array(0.429699, 90, -120.134, 87, -121, 831, -2, 831)
 position = Vector2(153.784, 230)
 scale = Vector2(1.17874, 1)
 polygon = PackedVector2Array(-4, 88, 5030.15, 62, 4721.35, -3, -9, -2)
+
+[node name="Node2D" parent="." instance=ExtResource("9_14tg6")]
+position = Vector2(3713, 410)
 
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]

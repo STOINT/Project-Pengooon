@@ -326,7 +326,7 @@ JUMP_FATTY = 0.0
 
 [node name="PENGOON" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gbgf8")
-animation = &"Jump"
+animation = &"IdleLeft"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="PENGOON"]
 
