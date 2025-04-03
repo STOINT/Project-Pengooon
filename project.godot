@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 AudioController="*res://audio_controller.tscn"
+GameController="*res://Game Controller.gd"
+EventController="*res://event controller.gd"
 
 [input]
 

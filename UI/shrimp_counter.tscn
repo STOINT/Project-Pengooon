@@ -25,6 +25,4 @@ grow_vertical = 2
 layout_mode = 0
 offset_right = 26.0
 offset_bottom = 23.0
-text = "yes
-"
 label_settings = SubResource("LabelSettings_xd6i6")

@@ -1,0 +1,86 @@
+[gd_scene load_steps=13 format=3 uid="uid://cs53wsbjs7lcx"]
+
+[ext_resource type="Script" path="res://node_2d.gd" id="1_br537"]
+[ext_resource type="Texture2D" uid="uid://d05l8w0bfyawk" path="res://assets/portal.png" id="1_shrrr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhill"]
+atlas = ExtResource("1_shrrr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8qsy"]
+atlas = ExtResource("1_shrrr")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akiyq"]
+atlas = ExtResource("1_shrrr")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8dgh"]
+atlas = ExtResource("1_shrrr")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wclqd"]
+atlas = ExtResource("1_shrrr")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cuqxu"]
+atlas = ExtResource("1_shrrr")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2is5"]
+atlas = ExtResource("1_shrrr")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4sskq"]
+atlas = ExtResource("1_shrrr")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8pty4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhill")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8qsy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_akiyq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8dgh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wclqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cuqxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2is5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4sskq")
+}],
+"loop": true,
+"name": &"PortalWoosh",
+"speed": 120.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1hksu"]
+
+[node name="Portal" type="Area2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+scale = Vector2(1.68598, 1.64749)
+script = ExtResource("1_br537")
+
+[node name="Portal" type="AnimatedSprite2D" parent="Node2D"]
+scale = Vector2(1, 1)
+sprite_frames = SubResource("SpriteFrames_8pty4")
+animation = &"PortalWoosh"
+frame_progress = 0.615727
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.05968, 1.96914)
+shape = SubResource("CircleShape2D_1hksu")

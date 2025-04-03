@@ -1,11 +1,17 @@
-[gd_scene load_steps=21 format=3 uid="uid://b1rgxoom5s4tl"]
+[gd_scene load_steps=24 format=3 uid="uid://b1rgxoom5s4tl"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_iiosr"]
+[ext_resource type="Texture2D" uid="uid://dyvsj8plcb0pm" path="res://assets/maybebackground.jpeg" id="2_cwgm6"]
+[ext_resource type="Texture2D" uid="uid://csdsnfhoytkyj" path="res://assets/button.png" id="2_eimss"]
 [ext_resource type="Texture2D" uid="uid://d1f7gffni8c6t" path="res://icon.svg" id="2_v2exj"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_frjqw"]
-atlas = ExtResource("2_v2exj")
-region = Rect2(0, 0, 128, 128)
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8g87"]
+atlas = ExtResource("2_eimss")
+region = Rect2(0, 0, 33, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wmyjl"]
+atlas = ExtResource("2_eimss")
+region = Rect2(33, 0, 33, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bfeei"]
 atlas = ExtResource("2_v2exj")
@@ -75,11 +81,14 @@ region = Rect2(96, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_frjqw")
+"texture": SubResource("AtlasTexture_g8g87")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wmyjl")
 }],
 "loop": true,
 "name": &"NOTOUCHIE",
-"speed": 1.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -147,18 +156,26 @@ grow_vertical = 2
 script = ExtResource("1_iiosr")
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureButton" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 470.0
-offset_top = 179.0
-offset_right = 618.0
-offset_bottom = 320.0
+[node name="Bakground" type="Sprite2D" parent="."]
+position = Vector2(1866, 317)
+texture = ExtResource("2_cwgm6")
 
-[node name="StartButton" type="AnimatedSprite2D" parent="TextureButton"]
-position = Vector2(48, 120)
+[node name="StartButton" type="AnimatedSprite2D" parent="."]
+position = Vector2(1849.88, 366.5)
+scale = Vector2(11.2197, 10.0625)
 sprite_frames = SubResource("SpriteFrames_n0irm")
 animation = &"NOTOUCHIE"
+autoplay = "NOTOUCHIE"
 
-[connection signal="mouse_entered" from="TextureButton" to="." method="_on_texture_button_mouse_entered"]
-[connection signal="mouse_exited" from="TextureButton" to="." method="_on_texture_button_mouse_exited"]
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[node name="TextureButton" type="TextureButton" parent="StartButton"]
+offset_left = -15.6756
+offset_top = -6.70807
+offset_right = 336.324
+offset_bottom = 136.292
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1827, 325)
+
+[connection signal="mouse_entered" from="StartButton/TextureButton" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_exited" from="StartButton/TextureButton" to="." method="_on_texture_button_mouse_exited"]
+[connection signal="pressed" from="StartButton/TextureButton" to="." method="_on_texture_button_pressed"]
