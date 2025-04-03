@@ -17,15 +17,8 @@ extends CharacterBody2D
 
 #Other stuff
 @onready var animated_sprite_2d = $PENGOON
-<<<<<<< Updated upstream
 @export var GRAVITY = 980
 
-=======
-var GRAVITY = 970
-var Shrimp = 0
-signal Swimp (Shrimp) 
-var level1 = false
->>>>>>> Stashed changes
 func _physics_process(delta):
 	# Gravity
 	if not is_on_floor():
@@ -77,21 +70,6 @@ func _physics_process(delta):
 		animated_sprite_2d.play("RunRight")
 	else: animated_sprite_2d.play("IdleRight")
 
-<<<<<<< Updated upstream
 func _on_area_2d_body_entered(body):
 	get_tree().change_scene_to_file("res://Levels/Level2.tscn")
 	print("i changed scene right")
-=======
-@warning_ignore("unused_parameter")
-func _on_collectable_shrimp_body_entered(body: Node2D) -> void:
-	Shrimp += 1
-	print("Shrimps: ", Shrimp) 
-	var e = str(Shrimp)
-	Swimp.emit(Shrimp)
-@warning_ignore("unused_parameter")
-func _on_portal_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_file("res://Levels/Level2.tscn")
-@warning_ignore("unused_parameter")
-func _on_portal_2_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_file("res://Levels/Level3.tscn")
->>>>>>> Stashed changes
