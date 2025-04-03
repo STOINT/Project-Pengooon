@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://3ay75xm7jrwu" path="res://assets/Tilemaps/tileset3.png" id="4_kk74j"]
 [ext_resource type="Texture2D" uid="uid://c4t31q5midxnf" path="res://assets/Tilemaps/updatedsnowtiles.png" id="5_d05ov"]
 [ext_resource type="Texture2D" uid="uid://chji0up2so0r2" path="res://assets/background/Parallax_Backgrounds_SnowyMountains/0.png" id="6_a4afv"]
-[ext_resource type="PackedScene" uid="uid://6kmj0oo1hrii" path="res://Level Builder/portal.tscn" id="8_kqrb2"]
+[ext_resource type="PackedScene" uid="uid://cs53wsbjs7lcx" path="res://Portal.tscn" id="8_alrrm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3txx6"]
 texture = ExtResource("1_0re7w")
@@ -186,52 +186,48 @@ tile_proxies/coords_level = [[0, Vector2i(0, 0)], [18, Vector2i(0, 0)], [0, Vect
 
 [node name="Level3" type="Node2D"]
 
-[node name="Wold Border" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
 position = Vector2(-95, -151)
 scale = Vector2(2.35185, 2.35185)
 texture = ExtResource("6_a4afv")
 
-[node name="1" type="Sprite2D" parent="Wold Border"]
+[node name="1" type="Sprite2D" parent="Background"]
 position = Vector2(767.243, 0)
 texture = ExtResource("6_a4afv")
 
-[node name="1" type="Sprite2D" parent="Wold Border/1"]
-position = Vector2(383.809, 0)
+[node name="2" type="Sprite2D" parent="Background"]
+position = Vector2(1918.67, 0)
 texture = ExtResource("6_a4afv")
 
-[node name="1" type="Sprite2D" parent="Wold Border/1/1"]
-position = Vector2(383.809, 0)
-texture = ExtResource("6_a4afv")
-
-[node name="1" type="Sprite2D" parent="Wold Border/1/1/1"]
-position = Vector2(383.809, 0)
-texture = ExtResource("6_a4afv")
-
-[node name="1" type="Sprite2D" parent="Wold Border/1/1/1/1"]
-position = Vector2(383.809, 0)
-texture = ExtResource("6_a4afv")
-
-[node name="0" type="Sprite2D" parent="Wold Border"]
+[node name="0" type="Sprite2D" parent="Background"]
 position = Vector2(383.558, 0)
 texture = ExtResource("6_a4afv")
 
-[node name="Level Change" type="StaticBody2D" parent="."]
+[node name="3" type="Sprite2D" parent="Background"]
+position = Vector2(1151.05, 0)
+texture = ExtResource("6_a4afv")
+
+[node name="4" type="Sprite2D" parent="Background"]
+position = Vector2(1534.86, 0)
+texture = ExtResource("6_a4afv")
+
+[node name="World Border" type="StaticBody2D" parent="."]
 position = Vector2(-2, 6)
 
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Level Change"]
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="World Border"]
 position = Vector2(-144, -694)
 scale = Vector2(1.00725, 1)
 polygon = PackedVector2Array(0.429699, 90, -120.134, 87, -121, 831, -2, 831, 10.7823, 463)
 
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Level Change"]
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="World Border"]
 position = Vector2(4174, -541)
 scale = Vector2(1.00725, 1)
 polygon = PackedVector2Array(0.429699, 90, -120.134, 87, -121, 831, -2, 831, 10.7823, 463)
 
-[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Level Change"]
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="World Border"]
 position = Vector2(3536.52, -903)
 scale = Vector2(13.7759, 1)
-polygon = PackedVector2Array(0.429699, 90, -120.134, 87, -274.792, 816, 50.4853, 825, 38.0723, 439)
+polygon = PackedVector2Array(-31.6872, 529, -269.784, 558, -274.792, 816, 50.4853, 825, 47.3639, 554)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-2, 6)
@@ -241,5 +237,7 @@ tile_set = SubResource("TileSet_8fd8x")
 [node name="Player" parent="." instance=ExtResource("3_wyb3o")]
 position = Vector2(-51, 85)
 
-[node name="Node2D" parent="." instance=ExtResource("8_kqrb2")]
-position = Vector2(2674, 1610)
+[node name="Portal3" parent="." instance=ExtResource("8_alrrm")]
+position = Vector2(2914, 1525)
+
+[connection signal="body_entered" from="Portal3" to="Player" method="_on_portal_3_body_entered"]
