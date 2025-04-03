@@ -245,8 +245,8 @@ size = Vector2(63, 50)
 [node name="main" type="Node2D"]
 
 [node name="Wold Border" type="Sprite2D" parent="."]
-position = Vector2(-208, -86)
-scale = Vector2(1.75926, 1.75926)
+position = Vector2(-94, -150)
+scale = Vector2(2.35185, 2.35185)
 texture = ExtResource("1_nnsuv")
 
 [node name="1" type="Sprite2D" parent="Wold Border"]
