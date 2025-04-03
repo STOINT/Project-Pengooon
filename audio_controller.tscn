@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://7ympgkunshb0"]
+
+[ext_resource type="Script" path="res://audio_controller.gd" id="1_ixbvd"]
+[ext_resource type="AudioStream" uid="uid://do1lvvo16y77t" path="res://assets/Project_Pengoon.mp3" id="2_2n46u"]
+
+[node name="Audio Controller" type="Node2D"]
+script = ExtResource("1_ixbvd")
+
+[node name="bg_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_2n46u")
+volume_db = -25.0

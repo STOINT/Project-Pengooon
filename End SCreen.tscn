@@ -1,0 +1,94 @@
+[gd_scene load_steps=11 format=3 uid="uid://ek8ukhcmv1ek"]
+
+[ext_resource type="Script" path="res://end_s_creen.gd" id="1_4slrl"]
+[ext_resource type="Texture2D" uid="uid://dt3i8cmw3olnq" path="res://assets/endgame.png" id="1_d01wt"]
+[ext_resource type="Texture2D" uid="uid://dptxklyr76ndw" path="res://credits.png" id="2_ca6oe"]
+[ext_resource type="Texture2D" uid="uid://csdsnfhoytkyj" path="res://assets/button.png" id="3_8xm1s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1eld"]
+atlas = ExtResource("2_ca6oe")
+region = Rect2(0, 0, 33, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33i73"]
+atlas = ExtResource("2_ca6oe")
+region = Rect2(33, 0, 33, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qivoc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1eld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33i73")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxdl6"]
+atlas = ExtResource("3_8xm1s")
+region = Rect2(0, 0, 33, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ngg8g"]
+atlas = ExtResource("3_8xm1s")
+region = Rect2(33, 0, 33, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tfc67"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxdl6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ngg8g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_4slrl")
+
+[node name="Endgame" type="Sprite2D" parent="."]
+position = Vector2(468, 459)
+scale = Vector2(0.72375, 0.583333)
+texture = ExtResource("1_d01wt")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(469.5, 449)
+scale = Vector2(0.72375, 0.583333)
+zoom = Vector2(2, 2)
+
+[node name="Credits" type="AnimatedSprite2D" parent="."]
+position = Vector2(706, 585)
+scale = Vector2(2.84849, 2.29167)
+sprite_frames = SubResource("SpriteFrames_qivoc")
+autoplay = "default"
+
+[node name="Credits" type="TextureButton" parent="Credits"]
+offset_left = -15.4468
+offset_top = -6.98181
+offset_right = 16.5532
+offset_bottom = 7.01819
+
+[node name="play" type="AnimatedSprite2D" parent="."]
+position = Vector2(230, 589)
+scale = Vector2(2.84849, 2.29167)
+sprite_frames = SubResource("SpriteFrames_tfc67")
+autoplay = "default"
+
+[node name="Play" type="TextureButton" parent="play"]
+offset_left = -17.2021
+offset_top = -7.85454
+offset_right = 17.7979
+offset_bottom = 8.14546
+
+[connection signal="pressed" from="Credits/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="play/Play" to="." method="_on_play_pressed"]
