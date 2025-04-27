@@ -277,7 +277,7 @@ tile_map_data = PackedByteArray("AAAAAAMABAAAAAAAAAABAAMABAAAAAAAAAAGAAMABAAAAAA
 tile_set = SubResource("TileSet_vvix7")
 
 [node name="Player" parent="." instance=ExtResource("8_iyity")]
-position = Vector2(89, 85)
+position = Vector2(113, 61)
 
 [node name="World Border" type="StaticBody2D" parent="."]
 position = Vector2(2, 0)
@@ -306,6 +306,6 @@ polygon = PackedVector2Array(0.429699, 90, -120.134, 87, -121, 831, -2, 831)
 position = Vector2(80, -26)
 
 [node name="Portal2" parent="." instance=ExtResource("9_r40b6")]
-position = Vector2(4692, 69)
+position = Vector2(4680, 60)
 
 [connection signal="body_entered" from="Portal2" to="Player" method="_on_portal_2_body_entered"]

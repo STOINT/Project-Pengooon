@@ -75,7 +75,7 @@ func _physics_process(delta):
 
 
 func _on_portal_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_file("res://Levels/Level2.tscn")
+	get_tree().change_scene_to_file("res://Character/Level2.tscn")
 
 func _on_portal_2_body_entered(body: Node2D) -> void:
 	get_tree().change_scene_to_file("res://Levels/Level3.tscn")
