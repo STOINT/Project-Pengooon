@@ -661,12 +661,12 @@ position = Vector2(3722, 409)
 [node name="click one of the shrimps and ctr D" type="Node" parent="."]
 
 [node name="Collectable shrimp3" parent="click one of the shrimps and ctr D" instance=ExtResource("8_ulunk")]
-position = Vector2(384, 544)
+position = Vector2(472, 554)
 
 [node name="Collectable shrimp" parent="click one of the shrimps and ctr D" instance=ExtResource("8_ulunk")]
-position = Vector2(324, 546)
+position = Vector2(364, 551)
 
 [node name="Collectable shrimp2" parent="click one of the shrimps and ctr D" instance=ExtResource("8_ulunk")]
-position = Vector2(350, 544)
+position = Vector2(418, 551)
 
 [connection signal="body_entered" from="Portal" to="Penguin" method="_on_portal_body_entered"]

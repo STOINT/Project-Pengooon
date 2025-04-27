@@ -102,9 +102,6 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g8g87")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wmyjl")
 }],
 "loop": true,
 "name": &"NOTOUCHIE",
@@ -148,10 +145,6 @@ offset_top = -7.23982
 offset_right = 15.9852
 offset_bottom = 6.76018
 metadata/_edit_use_anchors_ = true
-
-[node name="Area2D" type="Area2D" parent="StartButton"]
-position = Vector2(-14.8965, -7.38461)
-scale = Vector2(1, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

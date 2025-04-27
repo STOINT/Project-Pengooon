@@ -1,9 +1,10 @@
-[gd_scene load_steps=32 format=3 uid="uid://b7ua6j4ujxs16"]
+[gd_scene load_steps=36 format=3 uid="uid://b7ua6j4ujxs16"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_e34fk"]
-[ext_resource type="Texture2D" uid="uid://ccrigdpchk11g" path="res://assets/player.png" id="1_vgsnj"]
-[ext_resource type="Texture2D" uid="uid://but2g363ut6kl" path="res://assets/playerflipped.png" id="3_c7xx3"]
+[ext_resource type="Texture2D" uid="uid://ccrigdpchk11g" path="res://assets/player/player.png" id="1_vgsnj"]
+[ext_resource type="Texture2D" uid="uid://but2g363ut6kl" path="res://assets/player/playerflipped.png" id="3_c7xx3"]
 [ext_resource type="Texture2D" uid="uid://b5wbfenleex5n" path="res://assets/player/climbrightflipped.png" id="4_6cte4"]
+[ext_resource type="Texture2D" uid="uid://c0hcym0afotcf" path="res://assets/player/climbright.png" id="5_s8yem"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_25mpw"]
 atlas = ExtResource("3_c7xx3")
@@ -103,6 +104,18 @@ region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xa25t"]
 atlas = ExtResource("4_6cte4")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eq45b"]
+atlas = ExtResource("5_s8yem")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yx3kx"]
+atlas = ExtResource("5_s8yem")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35d23"]
+atlas = ExtResource("5_s8yem")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gbgf8"]
@@ -221,6 +234,20 @@ animations = [{
 "loop": true,
 "name": &"WallSlide",
 "speed": 120.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eq45b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yx3kx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35d23")
+}],
+"loop": true,
+"name": &"WallSlideLeft",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8gfac"]
@@ -232,7 +259,7 @@ JUMP_FATTY = 0.0
 
 [node name="PENGOON" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gbgf8")
-animation = &"WallSlide"
+animation = &"WallSlideLeft"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_8gfac")
