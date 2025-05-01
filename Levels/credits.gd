@@ -12,3 +12,6 @@ func _on_tilemap_pressed() -> void:
 
 func _on_tilemaptemplate_pressed() -> void:
 	OS.shell_open("https://www.gameart2d.com/winter-platformer-game-tileset.html")
+
+func _on_texture_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://assets/End SCreen.tscn")

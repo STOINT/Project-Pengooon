@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://chji0up2so0r2" path="res://assets/background/Parallax_Backgrounds_SnowyMountains/0.png" id="6_a4afv"]
 [ext_resource type="PackedScene" uid="uid://cs53wsbjs7lcx" path="res://Level Builder/Portal.tscn" id="8_alrrm"]
 
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3txx6"]
 texture = ExtResource("1_0re7w")
 margins = Vector2i(1, 1)

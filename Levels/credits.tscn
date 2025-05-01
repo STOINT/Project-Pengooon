@@ -1,6 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://js0da42ak2rl"]
+[gd_scene load_steps=6 format=3 uid="uid://js0da42ak2rl"]
 
 [ext_resource type="Script" path="res://Levels/credits.gd" id="1_2v4nm"]
+[ext_resource type="Texture2D" uid="uid://sposeotysovc" path="res://assets/backbutton.png" id="2_xkbu3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mf4w8"]
+atlas = ExtResource("2_xkbu3")
+region = Rect2(0, 0, 33, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7pe17"]
+atlas = ExtResource("2_xkbu3")
+region = Rect2(33, 0, 33, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vd1xq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mf4w8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7pe17")
+}],
+"loop": true,
+"name": &"Back to end",
+"speed": 5.0
+}]
 
 [node name="credits" type="Node2D"]
 script = ExtResource("1_2v4nm")
@@ -165,8 +188,22 @@ To find more information about these penguins and what you could do, visit websi
 made by The NZ Penguin Initiative, or the West Coast Penguin Trust to see what these 
 organisations are doing to protect the penguins of New Zealand."
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-430.687, 244.028)
+scale = Vector2(5.55677, 5.37151)
+sprite_frames = SubResource("SpriteFrames_vd1xq")
+animation = &"Back to end"
+autoplay = "Back to end"
+
+[node name="TextureButton" type="TextureButton" parent="AnimatedSprite2D"]
+offset_left = -16.0
+offset_top = -8.0
+offset_right = 17.0
+offset_bottom = 8.0
+
 [connection signal="pressed" from="Shrimp/Name/penguin" to="." method="_on_penguin_pressed"]
 [connection signal="pressed" from="Tilemap template/Name/tilemap" to="." method="_on_tilemap_pressed"]
 [connection signal="pressed" from="Background/Name2/Background" to="." method="_on_background_pressed"]
 [connection signal="pressed" from="Tilemap template2/Name/tilemaptemplate" to="." method="_on_tilemaptemplate_pressed"]
 [connection signal="pressed" from="Penguin/Name/penguin" to="." method="_on_penguin_pressed"]
+[connection signal="pressed" from="AnimatedSprite2D/TextureButton" to="." method="_on_texture_button_pressed"]
