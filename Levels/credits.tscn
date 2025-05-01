@@ -25,6 +25,7 @@ text = "Shrimp
 "
 
 [node name="Name" type="Label" parent="Shrimp"]
+layout_mode = 0
 offset_left = -1.0
 offset_top = 31.0
 offset_right = 122.0
@@ -33,6 +34,7 @@ text = "Artist : Tio D
 "
 
 [node name="penguin" type="LinkButton" parent="Shrimp/Name"]
+layout_mode = 0
 offset_left = -1.0
 offset_top = 20.0
 offset_right = 148.0
@@ -48,6 +50,7 @@ theme_override_font_sizes/font_size = 25
 text = "Tilemap template"
 
 [node name="Name" type="Label" parent="Tilemap template"]
+layout_mode = 0
 offset_left = -1.0
 offset_top = 31.0
 offset_right = 122.0
@@ -56,6 +59,7 @@ text = "Artist : Chris Bradfield
 "
 
 [node name="tilemap" type="LinkButton" parent="Tilemap template/Name"]
+layout_mode = 0
 offset_left = -1.0
 offset_top = 20.0
 offset_right = 148.0
@@ -72,6 +76,7 @@ text = "Background
 "
 
 [node name="Name2" type="Label" parent="Background"]
+layout_mode = 0
 offset_left = -1.0
 offset_top = 31.0
 offset_right = 122.0
@@ -80,6 +85,7 @@ text = "Artist : Admurin
 "
 
 [node name="Background" type="LinkButton" parent="Background/Name2"]
+layout_mode = 0
 offset_left = -1.0
 offset_top = 20.0
 offset_right = 148.0
@@ -95,6 +101,7 @@ theme_override_font_sizes/font_size = 25
 text = "Tilemap"
 
 [node name="Name" type="Label" parent="Tilemap template2"]
+layout_mode = 0
 offset_left = -1.0
 offset_top = 31.0
 offset_right = 161.0
@@ -103,6 +110,7 @@ text = "Artist :  Zuhria Alfitra
 "
 
 [node name="tilemaptemplate" type="LinkButton" parent="Tilemap template2/Name"]
+layout_mode = 0
 offset_left = -1.0
 offset_top = 20.0
 offset_right = 159.0
@@ -119,6 +127,7 @@ text = "Penguin
 "
 
 [node name="Name" type="Label" parent="Penguin"]
+layout_mode = 0
 offset_left = -1.0
 offset_top = 31.0
 offset_right = 122.0
@@ -127,6 +136,7 @@ text = "Artist : Caz Creates
 "
 
 [node name="penguin" type="LinkButton" parent="Penguin/Name"]
+layout_mode = 0
 offset_left = -1.0
 offset_top = 20.0
 offset_right = 148.0
@@ -143,12 +153,17 @@ text = "Information"
 
 [node name="Bluepenguin text" type="Label" parent="Information"]
 layout_mode = 0
-offset_left = -163.0
-offset_top = 48.0
-offset_right = 348.0
-offset_bottom = 156.0
-text = "insert bluepenguin text here
-"
+offset_left = -296.0
+offset_top = 44.0
+offset_right = 506.0
+offset_bottom = 223.0
+text = "The blue penguin, also called the little penguin, is a penguin species that is native to New Zealand.
+ They get their name from their distinct blue plumage on its body, and are primarily found 
+along the coast of the South Island. While these penguins are not currently endangered, 
+their population is declining, and if action is not taken, we may lose another native bird of New Zealand. 
+To find more information about these penguins and what you could do, visit websites 
+made by The NZ Penguin Initiative, or the West Coast Penguin Trust to see what these 
+organisations are doing to protect the penguins of New Zealand."
 
 [connection signal="pressed" from="Shrimp/Name/penguin" to="." method="_on_penguin_pressed"]
 [connection signal="pressed" from="Tilemap template/Name/tilemap" to="." method="_on_tilemap_pressed"]
