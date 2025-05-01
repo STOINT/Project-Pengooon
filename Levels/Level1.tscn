@@ -8,8 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://c4t31q5midxnf" path="res://assets/Tilemaps/updatedsnowtiles.png" id="4_r5s53"]
 [ext_resource type="Texture2D" uid="uid://c7l6llh1v8ap5" path="res://assets/Tilemaps/backgroundtileunderground.png" id="6_4wvop"]
 [ext_resource type="PackedScene" uid="uid://sgr74eo2l2j4" path="res://Level Builder/Collectable Shrimp.tscn" id="8_ulunk"]
-[ext_resource type="PackedScene" uid="uid://cs53wsbjs7lcx" path="res://Portal.tscn" id="9_53wme"]
-[ext_resource type="PackedScene" uid="uid://dqe4hgvle00uy" path="res://CoinUI.tscn" id="10_v1c3f"]
+[ext_resource type="PackedScene" uid="uid://cs53wsbjs7lcx" path="res://Level Builder/Portal.tscn" id="9_53wme"]
+[ext_resource type="PackedScene" uid="uid://dqe4hgvle00uy" path="res://assets/CoinUI.tscn" id="10_v1c3f"]
+
 
 [sub_resource type="GDScript" id="GDScript_ieep0"]
 script/source = "extends Sprite2D

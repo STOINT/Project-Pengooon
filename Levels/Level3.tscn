@@ -7,7 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://3ay75xm7jrwu" path="res://assets/Tilemaps/tileset3.png" id="4_kk74j"]
 [ext_resource type="Texture2D" uid="uid://c4t31q5midxnf" path="res://assets/Tilemaps/updatedsnowtiles.png" id="5_d05ov"]
 [ext_resource type="Texture2D" uid="uid://chji0up2so0r2" path="res://assets/background/Parallax_Backgrounds_SnowyMountains/0.png" id="6_a4afv"]
-[ext_resource type="PackedScene" uid="uid://cs53wsbjs7lcx" path="res://Portal.tscn" id="8_alrrm"]
+[ext_resource type="PackedScene" uid="uid://cs53wsbjs7lcx" path="res://Level Builder/Portal.tscn" id="8_alrrm"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3txx6"]
 texture = ExtResource("1_0re7w")

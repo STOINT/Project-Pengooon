@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://3vitv7t8h2qh"]
 
-[ext_resource type="Script" path="res://shrimp_counter.gd" id="1_rlts0"]
+[ext_resource type="Script" path="res://Scripts/shrimp_counter.gd" id="1_rlts0"]
+
 
 [sub_resource type="LabelSettings" id="LabelSettings_xd6i6"]
 

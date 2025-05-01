@@ -8,7 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://c7l6llh1v8ap5" path="res://assets/Tilemaps/backgroundtileunderground.png" id="6_rsre6"]
 [ext_resource type="Texture2D" uid="uid://c77w2amlqfwuf" path="res://assets/Tilemaps/tilesetwithfossile.png" id="7_3l0k5"]
 [ext_resource type="PackedScene" uid="uid://b7ua6j4ujxs16" path="res://Character/Player.tscn" id="8_iyity"]
-[ext_resource type="PackedScene" uid="uid://cs53wsbjs7lcx" path="res://Portal.tscn" id="9_r40b6"]
+[ext_resource type="PackedScene" uid="uid://cs53wsbjs7lcx" path="res://Level Builder/Portal.tscn" id="9_r40b6"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e8aml"]
 texture = ExtResource("2_q5424")

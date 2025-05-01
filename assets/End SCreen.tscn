@@ -1,9 +1,10 @@
 [gd_scene load_steps=11 format=3 uid="uid://ek8ukhcmv1ek"]
 
-[ext_resource type="Script" path="res://end_s_creen.gd" id="1_4slrl"]
+[ext_resource type="Script" path="res://Scripts/end_s_creen.gd" id="1_4slrl"]
 [ext_resource type="Texture2D" uid="uid://dt3i8cmw3olnq" path="res://assets/endgame.png" id="1_d01wt"]
-[ext_resource type="Texture2D" uid="uid://dptxklyr76ndw" path="res://credits.png" id="2_ca6oe"]
+[ext_resource type="Texture2D" uid="uid://dptxklyr76ndw" path="res://assets/credits.png" id="2_ca6oe"]
 [ext_resource type="Texture2D" uid="uid://csdsnfhoytkyj" path="res://assets/button.png" id="3_8xm1s"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t1eld"]
 atlas = ExtResource("2_ca6oe")

@@ -1,7 +1,8 @@
 [gd_scene load_steps=22 format=3 uid="uid://duuifn5mh2aep"]
 
 [ext_resource type="Texture2D" uid="uid://dwf2neve8vyet" path="res://assets/shrimpspritesheet.png" id="1_rgjuw"]
-[ext_resource type="Script" path="res://shrimpanimation.gd" id="1_uhp76"]
+[ext_resource type="Script" path="res://Scripts/shrimpanimation.gd" id="1_uhp76"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bquuc"]
 atlas = ExtResource("1_rgjuw")

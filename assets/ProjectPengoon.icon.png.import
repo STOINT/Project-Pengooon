@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clbn0yjmws2vc"
-path="res://.godot/imported/ADWAJADWA.png-7c890cecd1fd462daa7e4191ee28b56e.ctex"
+uid="uid://qhs8yhc07mrm"
+path="res://.godot/imported/ProjectPengoon.icon.png-a49cfcca96c9c8ae7ddaed21d3714801.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ADWAJADWA.png"
-dest_files=["res://.godot/imported/ADWAJADWA.png-7c890cecd1fd462daa7e4191ee28b56e.ctex"]
+source_file="res://assets/ProjectPengoon.icon.png"
+dest_files=["res://.godot/imported/ProjectPengoon.icon.png-a49cfcca96c9c8ae7ddaed21d3714801.ctex"]
 
 [params]
 

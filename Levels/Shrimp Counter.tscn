@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://gvo2bfhslqr7"]
 
-[ext_resource type="Script" path="res://shrimp_counter.gd" id="1_id8oq"]
+[ext_resource type="Script" path="res://Scripts/shrimp_counter.gd" id="1_id8oq"]
 [ext_resource type="Texture2D" uid="uid://rorb5groqjlh" path="res://assets/shrimp.png" id="1_sprrh"]
+
 
 [node name="Shrimp Counter" type="Control"]
 layout_mode = 3

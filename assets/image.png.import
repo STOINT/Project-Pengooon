@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwqmrlqc5kdn0"
-path="res://.godot/imported/ProjectPengoon.png-5a96d85c1fa74476ae5b9821143c4410.ctex"
+uid="uid://ctmtsqlwgvf02"
+path="res://.godot/imported/image.png-7a7bd711b5b4054e846c70397f9ba855.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ProjectPengoon.png"
-dest_files=["res://.godot/imported/ProjectPengoon.png-5a96d85c1fa74476ae5b9821143c4410.ctex"]
+source_file="res://assets/image.png"
+dest_files=["res://.godot/imported/image.png-7a7bd711b5b4054e846c70397f9ba855.ctex"]
 
 [params]
 
