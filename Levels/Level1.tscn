@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://cs53wsbjs7lcx" path="res://Level Builder/Portal.tscn" id="9_53wme"]
 [ext_resource type="PackedScene" uid="uid://dqe4hgvle00uy" path="res://assets/CoinUI.tscn" id="10_v1c3f"]
 
-
 [sub_resource type="GDScript" id="GDScript_ieep0"]
 script/source = "extends Sprite2D
 
